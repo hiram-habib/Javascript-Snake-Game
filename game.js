@@ -8,7 +8,6 @@ function main(currentTime) {
     if (secondsSinceLastRender < 1 / SNAKE_SPEED) return
     window.requestAnimationFrame(main)
     lastRenderTime = currentTime
-
     update()
     draw()
 }
@@ -20,5 +19,6 @@ function update() {
 }
 
 function draw() {
+    gameBoard.innerHTML = ''
     drawSnake(gameBoard)
 }
